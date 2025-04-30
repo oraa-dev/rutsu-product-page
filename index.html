@@ -32,7 +32,7 @@
 
 </head>
 <body>
-    <header class="bg-[#FFFFFF]">
+    <header class="bg-[#FFFFFF] font-poppins">
             <nav class="bg-[#33302E] sticky top-0">
                 <div class="flex justify-between items-center px-4 py-7">
                         <div class="lg:hidden block">
@@ -171,7 +171,41 @@
                                     </ul>
                                 </div>
 
+                                <div>
+                                    <ul class="flex gap-2 my-4">
+                                        <li class="text-[#5e5757]">size |</li>
+                                        <li class="text-[#8B9B7F]">6W</li>
+                                    </ul>
+                                </div>
 
+                                <div>
+                                    <div class="grid grid-cols-3 gap-2 text-center">
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">6W</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">7W</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">7.5W</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">8W</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">9W/7M</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">10W/8M</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">11W/9M</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">11.5W/10M</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">11M</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">12M</a>
+                                            <a class="border border-[#8B9B7F] text-[#334641] rounded-md	 px-8 py-2" href="">13M</a>
+                                    </div>
+                                </div>   
+                                
+                                <div class="inline-flex items-center border border-[#8B9B7F] rounded-md mt-5 px-3 py-2 bg-white">
+                                    <button id="decrease" class="text-lg text-[#5e5757] px-0 hover:text-black hover:font-bold">-</button>
+                                    <span id="count" class="px-5 text-lg font-medium text-[#5e5757]">1</span>
+                                    <button id="increase" class="text-lg text-[#5e5757] px-0 hover:text-black hover:font-bold">+</button>
+                                </div>
+
+                                <div class="flex items-center  justify-center mt-8 ml-2 gap-2 py-3 rounded-full bg-[#8B9B7F]">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <a  href="">ADD TO CART</a>
+                                </div>
+
+ 
                             </div>
 
 
@@ -196,6 +230,26 @@
 
 
     </footer>
+
+    <script>
+        const countEl = document.getElementById('count');
+        const increaseBtn = document.getElementById('increase');
+        const decreaseBtn = document.getElementById('decrease');
+    
+        let count = 1;
+    
+        increaseBtn.addEventListener('click', () => {
+          count++;
+          countEl.textContent = count;
+        });
+    
+        decreaseBtn.addEventListener('click', () => {
+          if (count > 1) {
+            count--;
+            countEl.textContent = count;
+          }
+        });
+    </script>
 </body>
 </html>
 
