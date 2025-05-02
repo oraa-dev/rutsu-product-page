@@ -4,3 +4,7 @@
     box-sizing: border-box;
 }
 
+.STICKYPOSITION{
+    position: sticky;
+    top:100px
+}
